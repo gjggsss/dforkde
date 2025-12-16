@@ -1,7 +1,7 @@
 photo-gallery/
 ├─ images/
-│  ├─ 001.jpg
-│  ├─ 002.jpg
-│  └─ 003.jpg
+│  ├─ 114-8_10_Merged_page_1.png
+│  ├─ 114-8_10_Merged_page_2.png
+│  └─ 114-8_10_Merged_page_3.png
 ├─ index.html
 └─ README.md
