@@ -2,16 +2,46 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>我的照片集</title>
+  <title>📄 文件圖片瀏覽</title>
   <style>
-    body { font-family: sans-serif; }
-    img { max-width: 300px; margin: 10px; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f7f7f7;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+      background: white;
+    }
   </style>
 </head>
 <body>
-  <h1>📸 我的照片</h1>
-  <img src="images/001.jpg">
-  <img src="images/002.jpg">
-  <img src="images/003.jpg">
+
+<h1>📑 114-8_10 文件圖像（共 65 頁）</h1>
+
+<div class="gallery" id="gallery"></div>
+
+<script>
+  const total = 65;
+  const gallery = document.getElementById("gallery");
+
+  for (let i = 1; i <= total; i++) {
+    const img = document.createElement("img");
+    img.src = `images/114-8_10_Merged_page_${i}.png`;
+    img.alt = `page ${i}`;
+    gallery.appendChild(img);
+  }
+</script>
+
 </body>
 </html>
